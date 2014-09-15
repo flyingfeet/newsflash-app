@@ -1,0 +1,22 @@
+/* Empty. Add your own CSS if you like */
+.list-group, .feedback-content, .trainer-content {
+	margin: 3px 5px 0px 5px;
+}
+
+.trainer-content h3 {
+  color: #CD0000;
+}
+
+.trainer-content img {
+  float: left;
+  padding-right: 5px;
+}
+
+.nav-bar-styling {
+	background-color: #FD0202 !important;
+}
+
+.form-control {
+	border: 1px solid #CCCCCC !important;
+	padding-left: 10px !important;
+}

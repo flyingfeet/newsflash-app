@@ -1,0 +1,16 @@
+<ion-view title="Newsflash">
+<ion-nav-buttons side="left">
+<button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+</ion-nav-buttons>
+<ion-nav-buttons side="right">
+<button class="button button-icon icon ion-refresh" ng-click="refresh()"></button>
+</ion-nav-buttons>
+<ion-content class="has-header">
+<div class="list-group" ng-repeat="news in activeNews">
+	<div class="list-group-item">
+		<h4 class="list-group-item-heading">{{news.title}}</h4>
+		<p class="list-group-item-text">{{news.message}}</p>
+	</div>
+</div>
+</ion-content>
+</ion-view>

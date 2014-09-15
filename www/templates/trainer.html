@@ -7,7 +7,7 @@
 <accordion close-others="false">
   <div class="trainer-content">
     <h3>Standard</h3>
-    <accordion-group heading="Marcus Weiß & Isabel Edvardsson">
+    <accordion-group heading="Marcus Weiß & Isabel Edvardsson" template-url="templates/accordion.html">
     <img src="img/trainer/hp_trainer_isabel_edvardsson_marcus_weiss_final.jpg" />
     Isabel Edvardsson und ihr Tanzpartner Marcus Weiß sind das wohl bekannteste Tanzpaar der BRD. Die Kür-Europameister der Standardtänze haben zwar aufgehört, aktiv Turniere zu tanzen, sind aber mit vollem Einsatz als Trainer in ganz Europa unterwegs. Einem breiten Publikum ist Isabel als Finalistin der RTL-Show "Let's Dance" an der Seite von Giovane Elber und Wayne Carpendale bekannt.
     </accordion-group>
@@ -30,6 +30,19 @@
     </accordion-group>
   </div>
 </accordion>
+
+<script id="template/accordion/accordion-group.html" type="text/ng-template">
+<div class="panel panel-default accordion-toggle" ng-click="toggleOpen()" accordion-transclude="heading">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <span ng-class="{'text-muted': isDisabled}">{{heading}}</span>
+      </h4>
+    </div>
+    <div class="panel-collapse" collapse="!isOpen">
+      <div class="panel-body" ng-transclude></div>
+    </div>
+  </div>
+</script>
 
 </ion-content>
 </ion-view>
